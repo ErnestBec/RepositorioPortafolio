@@ -1,0 +1,639 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+body{
+   background-image: url(https://lh3.googleusercontent.com/A3ncHKEHlEfw9l05VWpIOtCrfD1_jEhge6OsV71H1oXJh3ZWpT2lu-3Js0gFe87nJwHuVCmKsc7_REMXqeq_9DXcq_CW9Q_6p6OHQwr25y6ImhcuY0K6qttAoUbKCi56Cha-bDfTe1SGSQwM2u4eD4d5DvsHzti4U7YyevvFm_oNzHiaQ_zLmwXr7QAWe7ByJddyY7s0qyIqx4Wnp1bk50yBgIfWlXojKuF0cHRk37hXQn9kzoqfx2wdlqGMyyqRs1R6iYX43C12G_7VJNvLqtNw6usKB_MtED49uulc9cIN1dBAm9_WO6dkN4pTLMb8k0sJP7DcN19kJgw22Ll8F9ZgMoENgXYvHzFPmb2QTofTOpZmGh-jOBiDc2tqtMi5lT06BljHZGm2Pu8rlqcVZ2qxdzE52PXfvJUuHwJOoFQl-3vW1FL_QH2U9rn7YbMqWOlumYi-ynKVO9uG4E0dD0x5Y95qWtBEylCwQhWl0mgsGPeRsvrlmtGVs5_wNo2spuKhEAlA_wgc3XdjtAN-3UAYVB5HKE4HftZVKe4LnDdFhG1mHW9pErWymu2mBW_9aW0mbXsUGANF_usNVgMP8jusf25WMbbJ0MhFrIySd9UZ2qZS3bxIj-mzQjVe5s8gfVi52jjLgvy7elSrTGnch16unkvuheSf18dtFa2Ne3D3fIHr8MpR7ZkGBiYq60JwWLRRKJKH_EkxYNNdmNQkvU2c=w1092-h682-no?authuser=0);
+}
+/*Estilos de Nav*/
+nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: #343737;
+    opacity: 1;
+    top: 0px; 
+    left: 0px;
+    
+}
+img{
+    width: 80px;
+    vertical-align: middle;
+}
+nav>div>a{
+    text-decoration: none;
+    color: rgb(250, 236, 236);
+    font-size: 1.30rem;
+}
+
+nav>ul{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+nav>ul>li{
+    list-style:none
+}
+nav>ul>li>a{
+    text-decoration: none;
+    color: rgb(250, 236, 236);
+    font-size: 1.25rem;
+    padding: 5px;
+}
+
+ul.selected>li>a:hover{
+    color: rgb(81, 139, 141);
+    font-size: 1.50rem;
+}
+
+/*Estilos de Slider*/
+.slider{
+    list-style: none;
+    width: 850px;
+    height: 450px;
+    display: flex;
+    position: relative;
+    margin-top: 13%; margin-left: 20%;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    align-items: flex-end;
+}
+
+.slider input[type="radio"]{
+    position: relative;
+    z-index: 50 ;
+    margin: 10px;
+}
+.slider input[type="radio"]:checked ~ #Present{
+    opacity: 1;
+}
+.slider input[type="radio"]:checked ~ #Perfil{
+    opacity: 1;
+}
+
+/*Estilos de Estilos de Inicio*/
+#Present{
+    display: flex;
+    position: absolute;
+    top: 0%; left: 3%;
+    width: 800px;
+    height: 400px;
+    opacity: 0;
+}
+
+#Present>#program{
+    height: 315px;
+    width: 250px;
+    position: absolute;
+    top:20%; left: 30%;
+}
+#Present>h1{
+    padding: 2rem;
+    margin-left: 3%;
+    position: relative;
+    color: white;
+    height: 100px;
+    width: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+
+#Perfil{
+    display: flex;
+    width: 800px;
+    height: 400px;
+    opacity: 0;
+    position: absolute;
+    top:0%; left:3%;
+    background-image: url(https://lh3.googleusercontent.com/qiOOeR9fXLpKxg1hZ1N6mjO07fSGNKSkA7yh_Uk0TT44Zr5p8aGHVgyAp6izA2MCapJ56b9YUjsw4CrKSCc033qx3WQ-JEWuw1Aq1cjABMDm3go_mZDUlkjxJXGugjmJxB804P_SV16vC5Ui5m8TqjX25Khpub_4R_SchLJJu-od65hmVMA_Ssre3FtyyEzEDO5glouOt0iEoo0SmaYq3ob0hq0XdkPUFlSfVu9EAcSYcwszdaMRoSTqheVZinPDOfICg8dskGH0G5yfFBmEi4KZRMvCbtkD43UFkovGIMeRUS8XCXlW-qa4B_eGnxrDtqNmL0B0DKvlKVIlvr1ExN6TRJ2jv8FykEZZRADwidi8ixa9svcNs1yuWSOffUoSv-enczRuZkkXnaTJWs4jgRUrTljUib8MHwCfFZfjUeFwsjM8GQ8EnitIcuaKLJuPRewHg34DX7GMROW3TVPLx4ut5aH5bB3GQZcixWY2WN9kp6h49iIs-UrrA4M13z1P-Rismq31A5EKfya9KhTc7tqR1oFbfPZslNb12jwI8dTGmeM2Z_o2QmQXtYQUxBgMv7UJx5SVhA-Tbh2rLw9Iv19sev3KZ4ZqGjCAeQ_2zYz7mYmOcW52ikpd88H8zTCFYeK0bGJa9cF_DU-WQ-vo_5br_JELGErAMrtRhwE38zjZzHiMojDqrlkzTZM3XooMTWeLUJaajjp897G_SZhixmie=w800-h533-no?authuser=0);
+    border-radius: 5%;
+    box-shadow: 4px 3px 3px rgb(230, 220, 220);
+}
+img.presentacion{
+    padding: 2rem;
+    position: relative;
+    top: 50%; left: 24%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    height: 370px;
+    border-radius: 40%;
+    
+}
+#Perfil p{
+    width:55%;
+    height: 50%;
+    padding: 2rem;
+    position: relative;
+    top: 35%; left: 28%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+}
+
+
+
+
+/*Estilos de Cards de Proyecstos*/
+#cardjava{
+    background-color:#343737;
+    position: relative;
+    top: 250px; left: 20%;
+    width: 25%;
+    height: 300px;
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 5%;
+    padding: 0rem;
+}
+
+#cardjava>section>h1{
+    padding: 1rem ;
+    position: relative;
+    top: 30px;
+    left: 5%;
+    justify-content: center;
+    
+}
+#cardjava>section>p{
+    display: flex;
+    opacity: 0;
+}
+#cardjava>footer{
+    position: absolute;
+    top: 73%;
+    width: 100%;
+}
+#cardjava>section>img{
+    position: relative;
+    top:30px; left:40%;
+}
+#cardjava>img{
+    position: relative;
+    top:35px; left:15%;
+    width:256px ; height:217px ;
+    border-radius: 5%;
+    opacity: 0;
+}
+
+#cardjava>footer>img{
+    position: relative;
+    left:30%;
+    margin-top: -10px;
+}
+#cardjava:hover{
+    width: 25%;
+    height: 600px;
+    position: relative;
+    margin-top:-140px; left:20%;
+}
+#cardjava:hover>section{
+    border-radius: 5%;
+    height: 45%;
+    position: relative;
+    top: 0px;
+   
+}
+#cardjava:hover>section>p{
+    position: relative;
+    top: 40px;
+    left: 10%;
+    opacity: 1;
+}
+#cardjava:hover>img{
+    position: relative;
+    top:20px; left:24%;
+    width:206px ; height:167px ;
+    border-radius: 5%;
+    opacity: 1;
+}
+#cardjava:hover>footer{
+position: relative;
+top: 80px;
+}
+
+
+
+
+#cardhtml{
+    background-color:#343737;
+    position: relative;
+    top: 250px; left: 30%;
+    width: 25%;
+    height: 300px;
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 5%;
+    padding: 0rem;
+}
+
+#cardhtml>section>h1{
+    padding: 1rem ;
+    position: relative;
+    top: 30px;
+    left: 20%;
+    justify-content: center;
+    
+}
+#cardhtml>section>p{
+    position: relative;
+    top: -120px;left: 10%;
+    width: 300px;
+    opacity: 0;
+}
+#cardhtml>footer{
+    position: absolute;
+    top: 73%;
+    width: 100%;
+    height: 75px;
+}
+#cardhtml>section>img{
+    position: relative;
+    top:30px; left:40%;
+}
+#cardhtml>img{
+    position: relative;
+    top:35px; left:15%;
+    width:256px ; height:217px ;
+    border-radius: 5%;
+    opacity: 0;
+}
+
+#cardhtml>footer>img{
+    position: relative;
+    left:10%;
+    top: -15px;
+    width: 300px;
+}
+#cardhtml:hover{
+    width: 25%;
+    height: 600px;
+    position: relative;
+    margin-top:-140px; left:30%;
+}
+#cardhtml:hover>section{
+    border-radius: 5%;
+    height: 45%;
+    position: relative;
+    top: 0px;
+   
+}
+#cardhtml:hover>section>p{
+    position: relative;
+    top: 40px;
+    left: 10%;
+    opacity: 1;
+}
+#cardhtml:hover>img{
+    position: relative;
+    top:20px; left:18%;
+    width:250px ; height:167px ;
+    border-radius: 5%;
+    opacity: 1;
+}
+#cardhtml:hover>footer{
+position: relative;
+top: 80px;
+}
+
+/*Estilos de Contactos*/
+
+#CardContacto{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    top: 160px; left: 38%;
+    background-color: #343737;
+    border-radius: 5%;
+}
+
+#CardContacto>ul{
+    border-radius:0% 0% 5% 5%;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    height: 25%;
+    list-style: none;
+}
+#CardContacto>ul>h2{
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+    justify-content: center;
+    padding: 0rem 3rem 0rem 4rem ;
+}
+#CardContacto>ul>li{
+    position: relative;
+    top: 20px;left: 18%;
+    display: inline-block;
+}
+#CardContacto>ul>li>a{
+    text-decoration: none;
+}
+#CardContacto>ul>li>a>img{
+    width: 60px;
+    opacity: 0.5;
+}
+#CardContacto>ul>li>a>img:hover{
+    width: 70px;
+    opacity: 1;
+}
+#CardContacto>div{
+    height: 75%;
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+    
+}
+#CardContacto>div>img{
+    width: 100%;
+    border-radius:5% 5% 0% 0%;
+}
+#CardContacto>div>h1{
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1.5rem;
+    padding: 0rem 3rem 0rem 2rem ;
+}
+#CardContacto>div>ul{
+    list-style: none;
+}
+#CardContacto>div>ul>li>p{
+    position: relative;
+    padding: 1rem .5rem .5rem 1rem;
+}
+#CardContacto>div>ul>li>p>img{
+    width: 40px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*Estilos de Servicios*/
+#cardDes{
+    background-color:#343737;
+    position: relative;
+    top: 220px; left: 5%;
+    width: 25%;
+    height: 300px;
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 5%;
+    padding: 0rem;
+}
+
+#cardDes>section>h1{
+    padding: 1rem ;
+    position: relative;
+    top: 30px;
+    left: 10%;
+    width: 300px;
+    justify-content: center;
+    
+}
+#cardDes>section>p{
+    display: flex;
+    position: relative;
+    left: 0%;
+    opacity: 0;
+}
+#cardDes>footer{
+    position: relative;
+    top: -58%;
+    width: 100%;
+}
+#cardDes>section>img{
+    position: relative;
+    top:30px; left:40%;
+}
+#cardDes>img{
+    position: relative;
+    top:-100px; left:10%;
+    width:300px ; height:151px ;
+    border-radius: 5%;
+    opacity: 0;
+}
+
+#cardDes>footer>img{
+    position: relative;
+    left:10%;
+    width: 300px;
+    top: -30px;
+}
+#cardDes:hover{
+    width: 25%;
+    height: 600px;
+    position: relative;
+    top:100px; left:5%;
+}
+#cardDes:hover>section{
+    border-radius: 5%;
+    height: 45%;
+    position: relative;
+    top: 0px;
+   
+}
+#cardDes:hover>section>p{
+    position: relative;
+    top: 40px; left: 10%;
+    width: 300px;
+    opacity: 1;
+}
+#cardDes:hover>img{
+    position: relative;
+    top:40px; left:10%;
+    width:300px ; height:151px ;
+    border-radius: 5%;
+    opacity: 1;
+}
+#cardDes:hover>footer{
+position: relative;
+top: 80px;
+}
+
+
+#cardRep{
+    background-color:#343737;
+    position: relative;
+    top: 212px; left: 12%;
+    width: 25%;
+    height: 300px;
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 5%;
+    padding: 0rem;
+}
+
+#cardRep>section>h1{
+    padding: 1rem 1rem 1rem 3rem ;
+    position: relative;
+    width: 300px;
+    top: 30px;
+    left: 12%;
+    justify-content: center;
+    
+}
+#cardRep>section>p{
+    position: relative;
+    top: 25px;
+    left: 10%;
+    width: 300px;
+    display: flex;
+    opacity: 0;
+}
+#cardRep>footer{
+    position: relative;
+    top: -200px;
+    width: 100%;
+    height: 120px;
+}
+#cardRep>section>img{
+    position: relative;
+    top:30px; left:40%;
+}
+#cardRep>img{
+    position: relative;
+    top:-150px; left:24%;
+    width:206px ; height:167px ;
+    border-radius: 5%;
+    opacity: 0;
+}
+
+#cardRep>footer>img{
+    position: relative;
+    left:30%;
+    top: 10px;
+}
+#cardRep:hover{
+    width: 25%;
+    height: 600px;
+    position: relative;
+    top:100px; left:12%;
+
+}
+#cardRep:hover>section{
+    border-radius: 5%;
+    height: 45%;
+    position: relative;
+    top: 0px;
+    
+}
+#cardRep:hover>section>p{
+    position: relative;
+    top: 50px;
+    left: 10%;
+    opacity: 1;
+    
+}
+#cardRep:hover>img{
+    position: relative;
+    top:20px; left:17%;
+    width:250px ; height:167px ;
+    border-radius: 5%;
+    opacity: 1;
+}
+#cardRep:hover>footer{
+position: relative;
+top: 40px;
+}
+
+
+#cardNet{
+    background-color:#343737;
+    position: relative;
+    top: 241px; left: 20%;
+    width: 25%;
+    height: 300px;
+    color: rgb(255, 253, 253);
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 5%;
+    padding: 0rem;
+}
+
+#cardNet>section>h1{
+    padding: 1rem ;
+    position: relative;
+    top: 30px;
+    left: 5%;
+    justify-content: center;
+    
+}
+#cardNet>section>p{
+    display: flex;
+    position: relative;
+    top: -120px;
+    left: 10%;
+    opacity: 0;
+    width: 300px;
+}
+#cardNet>footer{
+    position: relative;
+    top: -70%;
+    width: 100%;
+    height: 70px;
+}
+#cardNet>section>img{
+    position: relative;
+    top:30px; left:40%;
+}
+#cardNet>img{
+    position: relative;
+    top:-200px; left:15%;
+    width:206px ; height:167px ;
+    border-radius: 5%;
+    opacity: 0;
+}
+
+#cardNet>footer>img{
+    position: relative;
+    left:35%;
+    top: 5px;
+    width: 100px;
+}
+#cardNet:hover{
+    width: 25%;
+    height: 600px;
+    position: relative;
+    top:90px; left:20%;
+}
+#cardNet:hover>section{
+    border-radius: 5%;
+    height: 45%;
+    position: relative;
+    top: 0px;
+   
+}
+#cardNet:hover>section>p{
+    position: relative;
+    top: 20px;
+    left: 10%;
+    opacity: 1;
+}
+#cardNet:hover>img{
+    position: relative;
+    top:20px; left:24%;
+    width:206px ; height:167px ;
+    border-radius: 5%;
+    opacity: 1;
+}
+#cardNet:hover>footer{
+position: relative;
+top: 80px;
+}
